@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Winner! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="winner-container">
+        <h1 id="winner-msg"> Congratulations! </h1>
+        <p class="winner-text">The winner is <span id="winner-name"></span>!</p>
+        <button onclick="window.location.href='index.html'" id="new-game-btn">🎮 Play Again</button>
+    </div>
+
+    <script>
+        document.getElementById("winner-name").innerText = localStorage.getItem("winner") || "Unknown";
+    </script>
+</body>
+</html>
